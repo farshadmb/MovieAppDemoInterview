@@ -18,5 +18,8 @@ protocol ApiRequest {
 extension ApiRequest {
     
     var acceptableStatusCodes: Set<Int> { Set(200..<300) }
-    var acceptableContentType: Set<String> { Set(["application/json"]) }
+    var acceptableContentTypes: Set<String> { Set(["application/json"]) }
+    
+    static var acceptableStatusCodes: Set<Int> { Set(200..<300) }
+    static var acceptableContentTypes: Set<String> { Set(["application/json"]) }
 }

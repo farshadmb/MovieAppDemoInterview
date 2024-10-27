@@ -23,6 +23,9 @@
 		F8E91A332CCE9AA80091DC63 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A322CCE9AA80091DC63 /* ApiRequest.swift */; };
 		F8E91A372CCE9C160091DC63 /* ApiClientAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A362CCE9C160091DC63 /* ApiClientAuthenticator.swift */; };
 		F8E91A3A2CCE9CB30091DC63 /* DefaultApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A392CCE9CB30091DC63 /* DefaultApiClient.swift */; };
+		F8E91A3C2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A3B2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift */; };
+		F8E91A3E2CCEA4390091DC63 /* DefaultParametersApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A3D2CCEA4390091DC63 /* DefaultParametersApiRequest.swift */; };
+		F8E91A402CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A3F2CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		F8E91A322CCE9AA80091DC63 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		F8E91A362CCE9C160091DC63 /* ApiClientAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientAuthenticator.swift; sourceTree = "<group>"; };
 		F8E91A392CCE9CB30091DC63 /* DefaultApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultApiClient.swift; sourceTree = "<group>"; };
+		F8E91A3B2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEncodableApiRequest.swift; sourceTree = "<group>"; };
+		F8E91A3D2CCEA4390091DC63 /* DefaultParametersApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultParametersApiRequest.swift; sourceTree = "<group>"; };
+		F8E91A3F2CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultApiClientAuthenticator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +277,9 @@
 			isa = PBXGroup;
 			children = (
 				F8E91A392CCE9CB30091DC63 /* DefaultApiClient.swift */,
+				F8E91A3B2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift */,
+				F8E91A3D2CCEA4390091DC63 /* DefaultParametersApiRequest.swift */,
+				F8E91A3F2CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift */,
 			);
 			path = Imp;
 			sourceTree = "<group>";
@@ -514,6 +523,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E91A3C2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift in Sources */,
+				F8E91A402CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift in Sources */,
+				F8E91A3E2CCEA4390091DC63 /* DefaultParametersApiRequest.swift in Sources */,
 				F8226BFE2CCE8CF900645255 /* AppDelegate.swift in Sources */,
 				F8E91A372CCE9C160091DC63 /* ApiClientAuthenticator.swift in Sources */,
 				F8E91A312CCE994A0091DC63 /* ApiTaskCancelable.swift in Sources */,
