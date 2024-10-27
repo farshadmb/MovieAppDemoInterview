@@ -39,6 +39,7 @@
 		F8E91A622CCED32A0091DC63 /* Collection+Additionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A612CCED32A0091DC63 /* Collection+Additionals.swift */; };
 		F8E91A642CCED3810091DC63 /* String+EmptyChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A632CCED3810091DC63 /* String+EmptyChecking.swift */; };
 		F8E91A662CCED3A60091DC63 /* URL+Directoryies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A652CCED3A60091DC63 /* URL+Directoryies.swift */; };
+		F8E91A692CCEDAC70091DC63 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A682CCEDAC70091DC63 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		F8E91A612CCED32A0091DC63 /* Collection+Additionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Additionals.swift"; sourceTree = "<group>"; };
 		F8E91A632CCED3810091DC63 /* String+EmptyChecking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EmptyChecking.swift"; sourceTree = "<group>"; };
 		F8E91A652CCED3A60091DC63 /* URL+Directoryies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Directoryies.swift"; sourceTree = "<group>"; };
+		F8E91A682CCEDAC70091DC63 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +333,7 @@
 		F8E91A442CCECBC70091DC63 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				F8E91A672CCEDABC0091DC63 /* Coordinator */,
 				F8E91A452CCECBD40091DC63 /* UI */,
 			);
 			path = Commons;
@@ -401,6 +404,14 @@
 				F8E91A652CCED3A60091DC63 /* URL+Directoryies.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		F8E91A672CCEDABC0091DC63 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F8E91A682CCEDAC70091DC63 /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -669,6 +680,7 @@
 				F8226BFE2CCE8CF900645255 /* AppDelegate.swift in Sources */,
 				F8E91A482CCECBFD0091DC63 /* ViewModelBindable.swift in Sources */,
 				F8E91A562CCECDB80091DC63 /* UIColor+Constructors.swift in Sources */,
+				F8E91A692CCEDAC70091DC63 /* Coordinator.swift in Sources */,
 				F8E91A4E2CCECC800091DC63 /* Storyboarded.swift in Sources */,
 				F8E91A582CCECE5C0091DC63 /* UIView+Nib.swift in Sources */,
 				F8E91A372CCE9C160091DC63 /* ApiClientAuthenticator.swift in Sources */,
