@@ -10,4 +10,6 @@ import Foundation
 struct AppConfig {
     
     static let ApiKey = "YOUR_API_KEY"
+    
+    static let defaltPageSize = 10
 }
