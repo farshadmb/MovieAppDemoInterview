@@ -12,7 +12,7 @@ protocol ApiRequest {
     var acceptableStatusCodes: Set<Int> { get }
     var acceptableContentTypes: Set<String> { get }
     
-    func asRequest() throws ->  URLRequest
+    func asRequest() throws -> URLRequest
 }
 
 extension ApiRequest {

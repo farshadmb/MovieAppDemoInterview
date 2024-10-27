@@ -14,7 +14,7 @@ protocol ApiTaskCancelable {
 }
 
 extension URLSessionTask: ApiTaskCancelable {}
-extension Alamofire.Request : ApiTaskCancelable {
+extension Alamofire.Request: ApiTaskCancelable {
     
     func cancel() {
         task?.cancel()
