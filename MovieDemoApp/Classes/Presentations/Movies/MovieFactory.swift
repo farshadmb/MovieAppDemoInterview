@@ -9,5 +9,5 @@ import Foundation
 
 protocol MovieFactory {
     
-    func makeMovieListViewController() -> MovieListViewController
+    func makeMovieListViewController() throws -> MovieListViewController
 }

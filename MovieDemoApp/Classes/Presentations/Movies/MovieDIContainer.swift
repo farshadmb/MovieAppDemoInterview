@@ -15,12 +15,15 @@ final class MovieDIContainer: MovieFactory {
     init(apiClient: ApiClient) {
         self.apiClient = apiClient
     }
-    
+   
+    // MARK: - Flow Coordinators
     func makeMovieCoordinator(navigation: UINavigationController) -> MovieCoordinator {
-        fatalError("not implemented")
+        MovieCoordinator(viewController: navigation, diFactory: self)
     }
     
-    func makeMovieListViewController() -> MovieListViewController {
-        fatalError("not implemented")
+    // MARK: - MovieFactory
+    func makeMovieListViewController() throws -> MovieListViewController {
+        let viewController = try MovieListViewController.instantiate()
+        return viewController
     }
 }

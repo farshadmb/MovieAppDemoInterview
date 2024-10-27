@@ -9,6 +9,14 @@ import UIKit
 
 class MovieListViewController: BaseViewController<MovieListViewModel> {
 
+    override class var storyboardName: String { "Movies" }
+    
+    override class var storyboardIdentifier: String { "MovieListVC" }
+    
+    override func setupUILayouts() {
+        view.backgroundColor = .systemRed
+    }
+    
     /*
     // MARK: - Navigation
 

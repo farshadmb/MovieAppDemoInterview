@@ -21,6 +21,9 @@ final class MovieCoordinator: Coordinator {
     }
     
     func start(animated: Bool) {
-       fatalError("not implemented")
+        guard let viewController = try? diFactory.makeMovieListViewController() else {
+            fatalError("Could not create \(MovieListViewController.self)")
+        }
+        self.viewController.pushViewController(viewController, animated: animated)
     }
 }

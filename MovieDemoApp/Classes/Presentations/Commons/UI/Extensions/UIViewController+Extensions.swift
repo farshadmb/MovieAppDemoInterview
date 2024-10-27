@@ -18,7 +18,8 @@ extension UIViewController {
     class var className: String {
         return String(describing: self)
     }
-    
+   
+    @objc
     class var storyboardIdentifier: String {
         return className
     }
