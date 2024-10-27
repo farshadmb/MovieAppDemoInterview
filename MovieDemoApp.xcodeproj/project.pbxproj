@@ -18,6 +18,14 @@
 		F8226C152CCE8CFB00645255 /* MovieDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8226C142CCE8CFB00645255 /* MovieDemoAppTests.swift */; };
 		F8226C1F2CCE8CFB00645255 /* MovieDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8226C1E2CCE8CFB00645255 /* MovieDemoAppUITests.swift */; };
 		F8226C212CCE8CFB00645255 /* MovieDemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8226C202CCE8CFB00645255 /* MovieDemoAppUITestsLaunchTests.swift */; };
+		F8E91A2E2CCE98130091DC63 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A2D2CCE98130091DC63 /* ApiClient.swift */; };
+		F8E91A312CCE994A0091DC63 /* ApiTaskCancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A302CCE994A0091DC63 /* ApiTaskCancelable.swift */; };
+		F8E91A332CCE9AA80091DC63 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A322CCE9AA80091DC63 /* ApiRequest.swift */; };
+		F8E91A372CCE9C160091DC63 /* ApiClientAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A362CCE9C160091DC63 /* ApiClientAuthenticator.swift */; };
+		F8E91A3A2CCE9CB30091DC63 /* DefaultApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A392CCE9CB30091DC63 /* DefaultApiClient.swift */; };
+		F8E91A3C2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A3B2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift */; };
+		F8E91A3E2CCEA4390091DC63 /* DefaultParametersApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A3D2CCEA4390091DC63 /* DefaultParametersApiRequest.swift */; };
+		F8E91A402CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A3F2CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +67,14 @@
 		F8226C1A2CCE8CFB00645255 /* MovieDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8226C1E2CCE8CFB00645255 /* MovieDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDemoAppUITests.swift; sourceTree = "<group>"; };
 		F8226C202CCE8CFB00645255 /* MovieDemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8E91A2D2CCE98130091DC63 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		F8E91A302CCE994A0091DC63 /* ApiTaskCancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTaskCancelable.swift; sourceTree = "<group>"; };
+		F8E91A322CCE9AA80091DC63 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		F8E91A362CCE9C160091DC63 /* ApiClientAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientAuthenticator.swift; sourceTree = "<group>"; };
+		F8E91A392CCE9CB30091DC63 /* DefaultApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultApiClient.swift; sourceTree = "<group>"; };
+		F8E91A3B2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEncodableApiRequest.swift; sourceTree = "<group>"; };
+		F8E91A3D2CCEA4390091DC63 /* DefaultParametersApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultParametersApiRequest.swift; sourceTree = "<group>"; };
+		F8E91A3F2CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultApiClientAuthenticator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +234,7 @@
 		F8E91A282CCE93C50091DC63 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				F8E91A2F2CCE992D0091DC63 /* Network */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -242,6 +259,29 @@
 			children = (
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F8E91A2F2CCE992D0091DC63 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F8E91A382CCE9CA70091DC63 /* Imp */,
+				F8E91A2D2CCE98130091DC63 /* ApiClient.swift */,
+				F8E91A302CCE994A0091DC63 /* ApiTaskCancelable.swift */,
+				F8E91A322CCE9AA80091DC63 /* ApiRequest.swift */,
+				F8E91A362CCE9C160091DC63 /* ApiClientAuthenticator.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F8E91A382CCE9CA70091DC63 /* Imp */ = {
+			isa = PBXGroup;
+			children = (
+				F8E91A392CCE9CB30091DC63 /* DefaultApiClient.swift */,
+				F8E91A3B2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift */,
+				F8E91A3D2CCEA4390091DC63 /* DefaultParametersApiRequest.swift */,
+				F8E91A3F2CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift */,
+			);
+			path = Imp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,8 +523,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E91A3C2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift in Sources */,
+				F8E91A402CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift in Sources */,
+				F8E91A3E2CCEA4390091DC63 /* DefaultParametersApiRequest.swift in Sources */,
 				F8226BFE2CCE8CF900645255 /* AppDelegate.swift in Sources */,
+				F8E91A372CCE9C160091DC63 /* ApiClientAuthenticator.swift in Sources */,
+				F8E91A312CCE994A0091DC63 /* ApiTaskCancelable.swift in Sources */,
 				F8226C002CCE8CF900645255 /* SceneDelegate.swift in Sources */,
+				F8E91A332CCE9AA80091DC63 /* ApiRequest.swift in Sources */,
+				F8E91A2E2CCE98130091DC63 /* ApiClient.swift in Sources */,
+				F8E91A3A2CCE9CB30091DC63 /* DefaultApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
