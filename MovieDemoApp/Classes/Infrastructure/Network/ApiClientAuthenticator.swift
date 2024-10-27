@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ApiInterceptor {
+protocol ApiClientAuthenticator {
     
     func authenticate(request: URLRequest) throws -> URLRequest
 }

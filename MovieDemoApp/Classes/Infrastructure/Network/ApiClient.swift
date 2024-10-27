@@ -11,5 +11,9 @@ protocol ApiClient {
     
     typealias Completion<T> = (_ response: Result<T, Error>) -> Void
     
-    func sendRequest<Req: ApiRequest, Res>(request: Req, completion: @escaping Completion<Res>) -> ApiTaskCancelable
+    func sendRequest<Req: ApiRequest, Res: Decodable>(request: Req,
+                                                      completion: @escaping Completion<Res>) throws -> ApiTaskCancelable
+    
+    func sendRequest<Req: ApiRequest>(request: Req,
+                                      completion: @escaping Completion<Data>) throws -> ApiTaskCancelable
 }
