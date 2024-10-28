@@ -16,7 +16,7 @@ enum MoviesRequestEndpoint {
     var path: String {
         switch self {
         case .movieList:
-            "/movie/popular"
+            "movie/popular"
         case .searchMovie:
             "search/movie"
         case .movieDetail(let id):
@@ -38,7 +38,7 @@ enum MoviesRequestEndpoint {
     }
     
     func request(baseURL: URL) throws -> ApiRequest {
-        guard let url = URL(string: path, relativeTo: baseURL) else {
+        guard let url = URL(string: baseURL.absoluteString + path) else {
             throw URLError(.badURL)
         }
         let request = DefaultParametersApiRequest(url: url,

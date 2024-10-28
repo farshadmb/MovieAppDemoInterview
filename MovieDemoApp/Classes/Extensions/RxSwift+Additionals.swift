@@ -32,4 +32,3 @@ extension ObservableType where Element: Collection {
         }
     }
 }
-

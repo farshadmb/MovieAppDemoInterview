@@ -12,6 +12,11 @@ final class MovieDIContainer: MovieFactory {
   
     let apiClient: ApiClient
     
+    // MARK: - Usecases
+    lazy var movieUsecase: MovieListUsecase = {
+        MovieListUsecaseImp(repository: makeMoviesRepository())
+    }()
+    
     init(apiClient: ApiClient) {
         self.apiClient = apiClient
     }
@@ -24,6 +29,14 @@ final class MovieDIContainer: MovieFactory {
     // MARK: - MovieFactory
     func makeMovieListViewController() throws -> MovieListViewController {
         let viewController = try MovieListViewController.instantiate()
+        let viewModel = MovieListViewModel(movieListUsecase: movieUsecase)
+        viewController.bind(to: viewModel)
         return viewController
     }
+    
+    // MARK: - Repositories
+    func makeMoviesRepository() -> MoviesRepository {
+        RemoteMoviesRepository(apiClient: apiClient, baseURL: AppConfig.baseURL)
+    }
+    
 }
