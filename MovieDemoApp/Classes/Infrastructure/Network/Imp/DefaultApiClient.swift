@@ -44,6 +44,9 @@ final class DefaultApiClient: ApiClient {
         return session.request(urlRequest)
             .validate(statusCode: request.acceptableStatusCodes)
             .validate(contentType: request.acceptableContentTypes)
+            #if DEBUG
+            .responseString(queue: serializeWorkQueue) { response in print(response.debugDescription) }
+            #endif
             .responseDecodable(of: Res.self, queue: serializeWorkQueue) { response in
                 switch response.result {
                 case .success(let success):
@@ -61,6 +64,9 @@ final class DefaultApiClient: ApiClient {
         return session.request(urlRequest)
             .validate(statusCode: request.acceptableStatusCodes)
             .validate(contentType: request.acceptableContentTypes)
+            #if DEBUG
+            .responseString(queue: serializeWorkQueue) { response in print(response.debugDescription) }
+            #endif
             .responseData(queue: serializeWorkQueue) { response in
                 switch response.result {
                 case .success(let success):

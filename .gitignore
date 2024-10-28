@@ -175,3 +175,4 @@ Dependencies/
 
 # End of https://www.toptal.com/developers/gitignore/api/xcodeinjection,xcode,cocoapods,swift,fastlane,objective-c
 *DS_Store*
+*.env*

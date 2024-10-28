@@ -28,7 +28,7 @@ struct DefaultParametersApiRequest: ApiRequest {
          method: HTTPMethod,
          parameters: [String: Any]? = nil,
          encoding: ParameterEncoding = URLEncoding.default,
-         headers: [String: String],
+         headers: [String: String] = [:],
          acceptableStatusCodes: Set<Int> = Self.acceptableStatusCodes,
          acceptableContentTypes: Set<String> = Self.acceptableContentTypes) {
         self.url = url

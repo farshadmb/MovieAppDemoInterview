@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 /// Abstract Base ViewController
 class BaseViewController<T: AnyObject>: UIViewController, ViewModelBindableType {
@@ -17,6 +18,8 @@ class BaseViewController<T: AnyObject>: UIViewController, ViewModelBindableType 
     var bottomLayoutAnchor: NSLayoutConstraint?
     
     var viewModel: T?
+    
+    let disposeBag = DisposeBag()
     
     deinit {
         viewModel = nil

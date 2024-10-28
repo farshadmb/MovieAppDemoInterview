@@ -9,9 +9,11 @@ import Foundation
 import UIKit
 
 protocol Coordinator: AnyObject {
+   
+    associatedtype ViewControlller: UIViewController
     
     /// The view controller for the coordinator to display
-    var viewController: UIViewController { get }
+    var viewController: ViewControlller { get }
     
     /**
      The Coordinator takes control and activates itself.
