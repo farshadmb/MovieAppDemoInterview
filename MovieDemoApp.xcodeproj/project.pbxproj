@@ -56,6 +56,9 @@
 		F8E91A8E2CCF0C8B0091DC63 /* MovieDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A8D2CCF0C8B0091DC63 /* MovieDto.swift */; };
 		F8E91A952CCF0DA10091DC63 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A942CCF0DA10091DC63 /* GenericResponse.swift */; };
 		F8E91A972CCF10A70091DC63 /* RemoteMoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A962CCF10A70091DC63 /* RemoteMoviesRepository.swift */; };
+		F8E91A9C2CCF12760091DC63 /* MoviesRequestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A9B2CCF12760091DC63 /* MoviesRequestEndpoint.swift */; };
+		F8E91A9E2CCF1C660091DC63 /* DTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A9D2CCF1C660091DC63 /* DTOMapper.swift */; };
+		F8E91AA02CCF200E0091DC63 /* MovieListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A9F2CCF200E0091DC63 /* MovieListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +138,9 @@
 		F8E91A8D2CCF0C8B0091DC63 /* MovieDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDto.swift; sourceTree = "<group>"; };
 		F8E91A942CCF0DA10091DC63 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		F8E91A962CCF10A70091DC63 /* RemoteMoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMoviesRepository.swift; sourceTree = "<group>"; };
+		F8E91A9B2CCF12760091DC63 /* MoviesRequestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRequestEndpoint.swift; sourceTree = "<group>"; };
+		F8E91A9D2CCF1C660091DC63 /* DTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOMapper.swift; sourceTree = "<group>"; };
+		F8E91A9F2CCF200E0091DC63 /* MovieListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				F8E91A8D2CCF0C8B0091DC63 /* MovieDto.swift */,
+				F8E91A9D2CCF1C660091DC63 /* DTOMapper.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -497,6 +504,7 @@
 		F8E91A922CCF0D290091DC63 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				F8E91A982CCF118A0091DC63 /* RequestEndpoint */,
 				F8E91A932CCF0D340091DC63 /* Response */,
 			);
 			path = Networks;
@@ -506,8 +514,17 @@
 			isa = PBXGroup;
 			children = (
 				F8E91A942CCF0DA10091DC63 /* GenericResponse.swift */,
+				F8E91A9F2CCF200E0091DC63 /* MovieListResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		F8E91A982CCF118A0091DC63 /* RequestEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				F8E91A9B2CCF12760091DC63 /* MoviesRequestEndpoint.swift */,
+			);
+			path = RequestEndpoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -746,6 +763,7 @@
 		};
 		F8E91A412CCEC8330091DC63 /* Swiftlint Runner */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -774,6 +792,7 @@
 				F8E91A7B2CCEF1A60091DC63 /* AppDIContainer.swift in Sources */,
 				F8E91A542CCECD5B0091DC63 /* Storyboard+Casting.swift in Sources */,
 				F8E91A8C2CCF02E90091DC63 /* MoviesRepository.swift in Sources */,
+				F8E91A9E2CCF1C660091DC63 /* DTOMapper.swift in Sources */,
 				F8E91A3C2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift in Sources */,
 				F8E91A402CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift in Sources */,
 				F8E91A8E2CCF0C8B0091DC63 /* MovieDto.swift in Sources */,
@@ -781,6 +800,7 @@
 				F8E91A6F2CCEE5190091DC63 /* MovieListViewModel.swift in Sources */,
 				F8E91A7D2CCEF53A0091DC63 /* MovieDIContainer.swift in Sources */,
 				F8226BFE2CCE8CF900645255 /* AppDelegate.swift in Sources */,
+				F8E91AA02CCF200E0091DC63 /* MovieListResponse.swift in Sources */,
 				F8E91A952CCF0DA10091DC63 /* GenericResponse.swift in Sources */,
 				F8E91A6D2CCEE4FD0091DC63 /* MovieListViewController.swift in Sources */,
 				F8E91A482CCECBFD0091DC63 /* ViewModelBindable.swift in Sources */,
@@ -788,6 +808,7 @@
 				F8E91A692CCEDAC70091DC63 /* Coordinator.swift in Sources */,
 				F8E91A852CCF01CA0091DC63 /* MovieListUsecase.swift in Sources */,
 				F8E91A4E2CCECC800091DC63 /* Storyboarded.swift in Sources */,
+				F8E91A9C2CCF12760091DC63 /* MoviesRequestEndpoint.swift in Sources */,
 				F8E91A872CCF023A0091DC63 /* Movie.swift in Sources */,
 				F8E91A582CCECE5C0091DC63 /* UIView+Nib.swift in Sources */,
 				F8E91A892CCF02760091DC63 /* MovieListUsecaseImp.swift in Sources */,

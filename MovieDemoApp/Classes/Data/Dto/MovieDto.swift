@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieDto {
+struct MovieDto: Decodable {
     
     let adult: Bool
     let backdropPath: String
