@@ -59,6 +59,7 @@
 		F8E91A9C2CCF12760091DC63 /* MoviesRequestEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A9B2CCF12760091DC63 /* MoviesRequestEndpoint.swift */; };
 		F8E91A9E2CCF1C660091DC63 /* DTOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A9D2CCF1C660091DC63 /* DTOMapper.swift */; };
 		F8E91AA02CCF200E0091DC63 /* MovieListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A9F2CCF200E0091DC63 /* MovieListResponse.swift */; };
+		F8E91AA22CCF24230091DC63 /* RxSwift+Additionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91AA12CCF24230091DC63 /* RxSwift+Additionals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 		F8E91A9B2CCF12760091DC63 /* MoviesRequestEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRequestEndpoint.swift; sourceTree = "<group>"; };
 		F8E91A9D2CCF1C660091DC63 /* DTOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOMapper.swift; sourceTree = "<group>"; };
 		F8E91A9F2CCF200E0091DC63 /* MovieListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponse.swift; sourceTree = "<group>"; };
+		F8E91AA12CCF24230091DC63 /* RxSwift+Additionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Additionals.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -444,6 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				F8E91A5C2CCED28A0091DC63 /* Foundation */,
+				F8E91AA12CCF24230091DC63 /* RxSwift+Additionals.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -796,6 +799,7 @@
 				F8E91A3C2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift in Sources */,
 				F8E91A402CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift in Sources */,
 				F8E91A8E2CCF0C8B0091DC63 /* MovieDto.swift in Sources */,
+				F8E91AA22CCF24230091DC63 /* RxSwift+Additionals.swift in Sources */,
 				F8E91A3E2CCEA4390091DC63 /* DefaultParametersApiRequest.swift in Sources */,
 				F8E91A6F2CCEE5190091DC63 /* MovieListViewModel.swift in Sources */,
 				F8E91A7D2CCEF53A0091DC63 /* MovieDIContainer.swift in Sources */,

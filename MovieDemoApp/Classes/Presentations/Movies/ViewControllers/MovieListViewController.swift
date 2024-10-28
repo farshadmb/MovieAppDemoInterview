@@ -12,9 +12,21 @@ class MovieListViewController: BaseViewController<MovieListViewModel> {
     override class var storyboardName: String { "Movies" }
     
     override class var storyboardIdentifier: String { "MovieListVC" }
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel?.fetchMovieListIfNeeded()
+    }
     
     override func setupUILayouts() {
         view.backgroundColor = .systemRed
+    }
+    
+    override func bindViewModel() {
+        guard let viewModel = viewModel else {
+            return
+        }
+        print(viewModel)
     }
     
     /*
