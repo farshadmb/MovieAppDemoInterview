@@ -55,6 +55,7 @@
 		F8E91A8C2CCF02E90091DC63 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A8B2CCF02E90091DC63 /* MoviesRepository.swift */; };
 		F8E91A8E2CCF0C8B0091DC63 /* MovieDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A8D2CCF0C8B0091DC63 /* MovieDto.swift */; };
 		F8E91A952CCF0DA10091DC63 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A942CCF0DA10091DC63 /* GenericResponse.swift */; };
+		F8E91A972CCF10A70091DC63 /* RemoteMoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A962CCF10A70091DC63 /* RemoteMoviesRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		F8E91A8B2CCF02E90091DC63 /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
 		F8E91A8D2CCF0C8B0091DC63 /* MovieDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDto.swift; sourceTree = "<group>"; };
 		F8E91A942CCF0DA10091DC63 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		F8E91A962CCF10A70091DC63 /* RemoteMoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMoviesRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +364,7 @@
 		F8E91A422CCEC94D0091DC63 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				F8E91A962CCF10A70091DC63 /* RemoteMoviesRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -800,6 +803,7 @@
 				F8E91A762CCEE5E90091DC63 /* MovieCoordinator.swift in Sources */,
 				F8E91A4B2CCECC350091DC63 /* BaseViewControllers.swift in Sources */,
 				F8E91A662CCED3A60091DC63 /* URL+Directoryies.swift in Sources */,
+				F8E91A972CCF10A70091DC63 /* RemoteMoviesRepository.swift in Sources */,
 				F8E91A642CCED3810091DC63 /* String+EmptyChecking.swift in Sources */,
 				F8E91A2E2CCE98130091DC63 /* ApiClient.swift in Sources */,
 				F8E91A622CCED32A0091DC63 /* Collection+Additionals.swift in Sources */,
