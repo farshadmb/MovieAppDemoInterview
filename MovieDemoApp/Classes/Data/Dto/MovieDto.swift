@@ -10,14 +10,13 @@ import Foundation
 struct MovieDto: Decodable {
     
     let adult: Bool
-    let backdropPath: String
-    let genreIds: [Int]
+    let backdropPath: String?
     let id: Int
     let originalLanguage: String
     let originalTitle: String
     let overview: String
     let popularity: Double
-    let posterPath: String
+    let posterPath: String?
     let releaseDate: String
     let title: String
     let video: Bool
@@ -27,7 +26,6 @@ struct MovieDto: Decodable {
     enum CodingKeys: String, CodingKey {
         case adult = "adult"
         case backdropPath = "backdrop_path"
-        case genreIds = "genre_ids"
         case id = "id"
         case originalLanguage = "original_language"
         case originalTitle = "original_title"
