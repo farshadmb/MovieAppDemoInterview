@@ -24,6 +24,14 @@ final class MovieCoordinator: Coordinator {
         guard let viewController = try? diFactory.makeMovieListViewController() else {
             fatalError("Could not create \(MovieListViewController.self)")
         }
+        
+        if let searchViewController = try? diFactory.makeMovieSearchViewController() {
+            let searchController = UISearchController(searchResultsController: searchViewController)
+            searchController.obscuresBackgroundDuringPresentation = false
+            searchController.searchResultsUpdater = searchViewController
+            viewController.navigationItem.searchController = searchController
+            viewController.definesPresentationContext = true
+        }
         self.viewController.pushViewController(viewController, animated: animated)
     }
 }

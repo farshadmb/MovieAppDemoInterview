@@ -33,6 +33,13 @@ final class MovieDIContainer: MovieFactory {
         viewController.bind(to: viewModel)
         return viewController
     }
+   
+    func makeMovieSearchViewController() throws -> MovieSearchViewController {
+        let viewController = MovieSearchViewController()
+        let viewModel = MovieSearchViewModel(usecase: movieUsecase)
+        viewController.bind(to: viewModel)
+        return viewController
+    }
     
     // MARK: - Repositories
     func makeMoviesRepository() -> MoviesRepository {

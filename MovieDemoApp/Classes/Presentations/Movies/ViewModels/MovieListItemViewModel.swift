@@ -8,7 +8,7 @@
 import Foundation
 import RxDataSources
 
-struct MovieListItemViewModel: IdentifiableType, Equatable {
+struct MovieListItemViewModel: IdentifiableType, Hashable {
    
     var identity: Int { id }
     var id: Int { model.id }
@@ -17,6 +17,13 @@ struct MovieListItemViewModel: IdentifiableType, Equatable {
     var rating: String { String(model.voteAverage) }
     
     let model: Movie
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(title)
+        hasher.combine(rating)
+        hasher.combine(releaseDate)
+    }
     
     static func == (lhs: MovieListItemViewModel, rhs: MovieListItemViewModel) -> Bool {
         lhs.id == rhs.id && lhs.title == rhs.title

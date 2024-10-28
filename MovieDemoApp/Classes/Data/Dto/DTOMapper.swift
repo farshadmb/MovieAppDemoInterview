@@ -27,7 +27,7 @@ extension MovieDto: DTOMapper {
               posterPath: posterPath,
               releaseDate: releaseDate,
               title: title,
-              video: video,
+              hasVideo: video,
               voteAverage: voteAverage,
               voteCount: voteCount)
     }

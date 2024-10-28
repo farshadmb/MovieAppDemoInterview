@@ -36,7 +36,6 @@ class MovieListViewController: BaseViewController<MovieListViewModel> {
         tableView.separatorColor = .clear
         tableView.registerCell(type: MovieListTableCell.self)
         tableView.estimatedRowHeight = 250.0
-        tableView.estimatedSectionHeaderHeight = 50.0
     }
     
     override func bindViewModel() {
