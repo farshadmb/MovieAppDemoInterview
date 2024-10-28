@@ -28,6 +28,8 @@ final class MovieSearchViewModel {
             .map { [ResultSectionType(model: 0, items: $0)] }
     }
     
+    var  noResults: Driver<Bool> { hasNoResult.asDriver() }
+    
     var didErrorOccured: Driver<String> { error.asDriver(onErrorDriveWith: .never()) }
     
     let usecase: MovieListUsecase
@@ -37,6 +39,7 @@ final class MovieSearchViewModel {
     private let searchResult = BehaviorRelay<[ResultSectionType.Item]>(value: [])
     private let queryText = BehaviorRelay(value: "")
     private let loading = BehaviorRelay(value: false)
+    private let hasNoResult = BehaviorRelay(value: false)
     private let error = PublishRelay<String>()
     private var page = 0
     
@@ -68,7 +71,13 @@ final class MovieSearchViewModel {
         }
         loadMoreResult()
     }
-    
+   
+    func retrySearchResult() {
+        guard loading.value == false else { return }
+        let nextStep = searchResult.value.count == 0 ? 0 : 1
+        let text = queryText.value
+        search(text: text, page: page + nextStep)
+    }
     // MARK: - Private Methods
     
     private func searchMovie(for text: String) {
@@ -86,6 +95,7 @@ final class MovieSearchViewModel {
     }
     
     private func search(text: String, page: Int, clearResults: Bool = false) {
+        hasNoResult.accept(false)
         loading.accept(true)
         let source = usecase.searchMovies(key: text, page: page, size: 0)
             .asObservable().share(replay: 1)
@@ -93,7 +103,6 @@ final class MovieSearchViewModel {
             .do(onCompleted: { [weak loading] in loading?.accept(false) })
         
         source.compactMap(\.success).bind(with: self) { (self, movies) in
-            self.page = page
             let result: [ResultSectionType.Item]
             if !clearResults {
                 var newItems = [ResultSectionType.Item]()
@@ -103,6 +112,11 @@ final class MovieSearchViewModel {
                 result = newItems
             } else {
                 result = movies.map(MovieListItemViewModel.init)
+            }
+            if result.isEmpty && self.page <= 1 {
+                self.hasNoResult.accept(true)
+            } else {
+                self.page = page
             }
             self.searchResult.accept(result)
         }.disposed(by: disposeBag)

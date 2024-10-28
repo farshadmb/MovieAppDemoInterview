@@ -67,10 +67,11 @@ class MovieListViewModel {
     
     private func fetchMovies(page: Int) {
         loading.accept(true)
+        let loadingBlock: (Any) -> Void = { [weak loading] _ in loading?.accept(false) }
         let source = self.movieListUsecase.getMovieList(page: page, size: 0)
             .asObservable().share(replay: 1)
             .mapToResult()
-            .do(onCompleted: { [weak loading] in loading?.accept(false) })
+            .do(onNext: loadingBlock, onError: loadingBlock)
         source.compactMap(\.success).bind(with: self) { (self, movies) in
             self.page = page
             var newItems = [MovieListItemViewModel]()

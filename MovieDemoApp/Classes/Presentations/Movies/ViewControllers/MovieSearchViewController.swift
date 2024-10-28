@@ -16,6 +16,7 @@ import PureLayout
 class MovieSearchViewController: BaseViewController<MovieSearchViewModel>, UISearchResultsUpdating {
     
     let tableView = UITableView(frame: .zero, style: .plain)
+    private let resultsLabel = UILabel()
     
     lazy var dataSource: RxTableViewSectionedAnimatedDataSource<ViewModelType.ResultSectionType> = {
         RxTableViewSectionedAnimatedDataSource {[unowned self] _, tableView, index, viewModel in
@@ -41,6 +42,12 @@ class MovieSearchViewController: BaseViewController<MovieSearchViewModel>, UISea
         tableView.registerCell(type: MovieListTableCell.self)
         tableView.separatorColor = .clear
         tableView.estimatedRowHeight = 250.0
+        
+        resultsLabel.text = "No Results Found"
+        resultsLabel.textAlignment = .center
+        resultsLabel.textColor = .gray
+        resultsLabel.isHidden = true // Initially hidden
+        tableView.backgroundView = resultsLabel
     }
     
     override func bindViewModel() {
@@ -48,6 +55,11 @@ class MovieSearchViewController: BaseViewController<MovieSearchViewModel>, UISea
         
         viewModel.results.asObservable()
             .bind(to: tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+        
+        viewModel.noResults.asObservable().not().bind(with: self) { (this, isHide) in
+            this.resultsLabel.text = "No Results Found"
+            this.resultsLabel.isHidden = isHide
+        }.disposed(by: disposeBag)
         
         viewModel.didErrorOccured.asObservable().bind(with: self) { (self, error) in
             self.presentAlertFor(error: error)
@@ -66,7 +78,7 @@ class MovieSearchViewController: BaseViewController<MovieSearchViewModel>, UISea
     private func presentAlertFor(error msg: String) {
         let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: {[unowned self] _ in
-            // TODO: add retry mechanism
+            viewModel?.retrySearchResult()
         }))
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { _ in
             alert.dismiss(animated: true)
