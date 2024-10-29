@@ -78,7 +78,7 @@ final class MovieDetailsViewModel {
         loading.accept(true)
         let movieRes = usecase.getMovieDetail(forId: id)
             .asObservable().share(replay: 1).mapToResult()
-            .do(onCompleted: {[weak loading] in loading?.accept(false) })
+            .do(onCompleted: { [weak loading] in loading?.accept(false) })
         movieRes.compactMap(\.success).bind(with: self) { (self, movie) in
             self.buildMovieDetail(for: movie)
         }.disposed(by: disposeBag)
