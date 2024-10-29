@@ -37,7 +37,7 @@ struct MovieListItemViewModel: IdentifiableType, Hashable {
         }
         return try? ImageUrlBuilder(baseURL: AppConfig.imageBaseURL)
             .imagePath(posterPath)
-            .imageType(.poster, width: 150)
+            .imageType(.poster, width: 90)
             .build()
     }
     
