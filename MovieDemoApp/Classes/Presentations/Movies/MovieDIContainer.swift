@@ -52,7 +52,7 @@ final class MovieDIContainer: MovieFactory {
         return viewController
     }
     
-    func makeMovieDetailViewController(withId movie: Movie) throws -> MovieDetailViewController {
+    func makeMovieDetailViewController(with movie: Movie) throws -> MovieDetailViewController {
         let viewController = try MovieDetailViewController.instantiate()
         let viewModel = MovieDetailsViewModel(entity: movie, useCase: movieDetailUsecase)
         viewController.bind(to: viewModel)

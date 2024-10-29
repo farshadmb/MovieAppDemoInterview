@@ -31,6 +31,10 @@ final class MovieSearchViewModel {
     var noResults: Driver<Bool> { hasNoResult.asDriver() }
     
     var didErrorOccured: Driver<String> { error.asDriver(onErrorDriveWith: .never()) }
+   
+    typealias MovieSelectionClosure = (Int) -> Void
+    
+    var didSelectMovie: MovieSelectionClosure?
     
     let usecase: MovieListUsecase
     
@@ -42,6 +46,10 @@ final class MovieSearchViewModel {
     private let hasNoResult = BehaviorRelay(value: false)
     private let error = PublishRelay<String>()
     private var page = 0
+    
+    deinit {
+        didSelectMovie = nil
+    }
     
     init(usecase: MovieListUsecase) {
         self.usecase = usecase
@@ -60,8 +68,8 @@ final class MovieSearchViewModel {
     
     func observeResultSelectChanges() {
         selectResult.debounce(.milliseconds(300), scheduler: MainScheduler.asyncInstance)
-            .bind(with: self) { (_, _) in
-                // TODO: add select and navigation
+            .bind(with: self) { (self, viewModel) in
+                self.didSelectMovie?(viewModel.id)
             }.disposed(by: disposeBag)
     }
    

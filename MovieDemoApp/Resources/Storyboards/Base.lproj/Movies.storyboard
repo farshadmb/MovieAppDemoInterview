@@ -298,6 +298,7 @@
                         <outlet property="popularityLabel" destination="aFO-pN-8Zx" id="IA9-YL-hvK"/>
                         <outlet property="ratingView" destination="19l-5r-iyc" id="934-8l-3d0"/>
                         <outlet property="releaseDateLabel" destination="QJ9-tq-aNg" id="7g7-AJ-ZVd"/>
+                        <outlet property="scrollView" destination="fAq-cr-eAk" id="37C-po-W6l"/>
                         <outlet property="statusLabel" destination="qbe-nz-uXq" id="fPx-kF-d0R"/>
                         <outlet property="titleLabel" destination="YLb-Ag-4YS" id="I1S-wE-mto"/>
                         <outlet property="totalVoteLabel" destination="byd-T1-9ai" id="XnC-dC-mgp"/>
