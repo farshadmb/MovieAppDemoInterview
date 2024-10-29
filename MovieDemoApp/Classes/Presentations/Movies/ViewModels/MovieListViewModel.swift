@@ -24,7 +24,8 @@ class MovieListViewModel {
         }
     }
     
-    var isLoading: Driver<Bool> { loading.asDriver() }
+    var isLoading: Driver<Bool> { loading.asDriver().withLatestFrom(movies.asDriver(),
+                                                                    resultSelector: { $0 && $1.count == 0 }) }
     
     var didErrorOccured: Driver<String> { error.asDriver(onErrorDriveWith: .never()) }
    
