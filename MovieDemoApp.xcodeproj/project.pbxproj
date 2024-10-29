@@ -848,6 +848,7 @@
 				F8E91A9C2CCF12760091DC63 /* MoviesRequestEndpoint.swift in Sources */,
 				F8B794FF2CCF31EE003B29DB /* MovieListTableCell.swift in Sources */,
 				F8E91A872CCF023A0091DC63 /* Movie.swift in Sources */,
+				F8BF411B2CD0F3830031124A /* CircularRateView.swift in Sources */,
 				F8E91A582CCECE5C0091DC63 /* UIView+Nib.swift in Sources */,
 				F8E91A892CCF02760091DC63 /* MovieListUsecaseImp.swift in Sources */,
 				F8E91A372CCE9C160091DC63 /* ApiClientAuthenticator.swift in Sources */,
