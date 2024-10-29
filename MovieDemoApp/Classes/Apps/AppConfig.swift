@@ -8,7 +8,8 @@
 import Foundation
 
 struct AppConfig {
-    
+   
+    #warning("put your api key here")
     static let ApiKey = "YOUR-API-KEY"
     static let defaltPageSize = 10
     // swiftlint:disable:next force_unwrapping

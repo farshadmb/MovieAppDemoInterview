@@ -86,7 +86,7 @@ final class MovieDetailsViewModel {
     }
     
     private func getBackdropURL(_ model: Movie) -> URL? {
-        guard let path = model.backdropPath else {
+        guard let path = model.backdropPath ?? model.posterPath else {
             return nil
         }
         return try? ImageUrlBuilder(baseURL: AppConfig.imageBaseURL)
