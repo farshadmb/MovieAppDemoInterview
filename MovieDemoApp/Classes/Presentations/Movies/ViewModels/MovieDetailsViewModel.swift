@@ -28,8 +28,6 @@ final class MovieDetailsViewModel {
     private var errorSub = PublishRelay<String>()
     private var isFetched = false
     
-    typealias MovieDetailUsecase = AnyObject
-    
     let usecase: MovieDetailUsecase
     
     let disposeBag = DisposeBag()
@@ -77,14 +75,14 @@ final class MovieDetailsViewModel {
     
     private func fetchMovieDetail(forId id: Int) {
         guard !loading.value else { return }
-//        loading.accept(true)
-//        let movieRes = usecase.getMovieDetails(for: id)
-//            .asObservable().share(replay: 1).mapToResult()
-//            .do(onComplete: {[weak loading] in loading?.accept(false) })
-//        movieRes.compactMap(\.success).bind(with: self) { (self, movie) in
-//            self.buildMovieDetail(for: movie)
-//        }.diposed(by: disposeBag)
-//        movieRes.compactMap(\.failure).mapAt(\.localizedDescription).bind(to: errorSub).disposed(by: disposeBag)
+        loading.accept(true)
+        let movieRes = usecase.getMovieDetail(forId: id)
+            .asObservable().share(replay: 1).mapToResult()
+            .do(onCompleted: {[weak loading] in loading?.accept(false) })
+        movieRes.compactMap(\.success).bind(with: self) { (self, movie) in
+            self.buildMovieDetail(for: movie)
+        }.disposed(by: disposeBag)
+        movieRes.compactMap(\.failure).mapAt(\.localizedDescription).bind(to: errorSub).disposed(by: disposeBag)
     }
     
     private func getBackdropURL(_ model: Movie) -> URL? {

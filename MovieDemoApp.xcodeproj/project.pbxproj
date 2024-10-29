@@ -19,6 +19,8 @@
 		F8226C1F2CCE8CFB00645255 /* MovieDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8226C1E2CCE8CFB00645255 /* MovieDemoAppUITests.swift */; };
 		F8226C212CCE8CFB00645255 /* MovieDemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8226C202CCE8CFB00645255 /* MovieDemoAppUITestsLaunchTests.swift */; };
 		F86635E92CD10C6E00B198EF /* MovieDetailDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86635E82CD10C6E00B198EF /* MovieDetailDto.swift */; };
+		F86635EB2CD111E300B198EF /* MovieDetailUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86635EA2CD111E300B198EF /* MovieDetailUsecase.swift */; };
+		F86635ED2CD1120D00B198EF /* MovieDetailUsecaseImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86635EC2CD1120D00B198EF /* MovieDetailUsecaseImp.swift */; };
 		F8B794FE2CCF31EE003B29DB /* MovieListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8B794FD2CCF31EE003B29DB /* MovieListTableCell.xib */; };
 		F8B794FF2CCF31EE003B29DB /* MovieListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B794FC2CCF31EE003B29DB /* MovieListTableCell.swift */; };
 		F8B795012CCF36D6003B29DB /* MovieListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B795002CCF36D6003B29DB /* MovieListItemViewModel.swift */; };
@@ -113,6 +115,8 @@
 		F8226C1E2CCE8CFB00645255 /* MovieDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDemoAppUITests.swift; sourceTree = "<group>"; };
 		F8226C202CCE8CFB00645255 /* MovieDemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F86635E82CD10C6E00B198EF /* MovieDetailDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailDto.swift; sourceTree = "<group>"; };
+		F86635EA2CD111E300B198EF /* MovieDetailUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailUsecase.swift; sourceTree = "<group>"; };
+		F86635EC2CD1120D00B198EF /* MovieDetailUsecaseImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailUsecaseImp.swift; sourceTree = "<group>"; };
 		F8B794FC2CCF31EE003B29DB /* MovieListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableCell.swift; sourceTree = "<group>"; };
 		F8B794FD2CCF31EE003B29DB /* MovieListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListTableCell.xib; sourceTree = "<group>"; };
 		F8B795002CCF36D6003B29DB /* MovieListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListItemViewModel.swift; sourceTree = "<group>"; };
@@ -523,6 +527,8 @@
 			children = (
 				F8E91A842CCF01CA0091DC63 /* MovieListUsecase.swift */,
 				F8E91A882CCF02760091DC63 /* MovieListUsecaseImp.swift */,
+				F86635EA2CD111E300B198EF /* MovieDetailUsecase.swift */,
+				F86635EC2CD1120D00B198EF /* MovieDetailUsecaseImp.swift */,
 			);
 			path = MoviesUsecase;
 			sourceTree = "<group>";
@@ -841,6 +847,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8BF41162CD0E9E80031124A /* MovieDetailsViewModel.swift in Sources */,
+				F86635EB2CD111E300B198EF /* MovieDetailUsecase.swift in Sources */,
 				F8E91A5E2CCED29A0091DC63 /* Result+Extensions.swift in Sources */,
 				F8E91A812CCEF83F0091DC63 /* AppConfig.swift in Sources */,
 				F8E91A7B2CCEF1A60091DC63 /* AppDIContainer.swift in Sources */,
@@ -881,6 +888,7 @@
 				F8E91A332CCE9AA80091DC63 /* ApiRequest.swift in Sources */,
 				F8E91A512CCECD0F0091DC63 /* UIViewController+Extensions.swift in Sources */,
 				F8E91A602CCED2FE0091DC63 /* DateFormatter+Ext.swift in Sources */,
+				F86635ED2CD1120D00B198EF /* MovieDetailUsecaseImp.swift in Sources */,
 				F8E91A792CCEE6950091DC63 /* AppCoordinator.swift in Sources */,
 				F8BF41182CD0EA480031124A /* MovieDetailViewController.swift in Sources */,
 				F8BF41122CD0D30F0031124A /* UImageView+ImageDownloader.swift in Sources */,
