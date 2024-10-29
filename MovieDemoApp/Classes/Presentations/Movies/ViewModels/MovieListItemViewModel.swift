@@ -31,4 +31,14 @@ struct MovieListItemViewModel: IdentifiableType, Hashable {
             && rhs.model.voteAverage == lhs.model.voteAverage
     }
     
+    func getPosterURL() -> URL? {
+        guard let posterPath = model.posterPath else {
+            return nil
+        }
+        return try? ImageUrlBuilder(baseURL: AppConfig.imageBaseURL)
+            .imagePath(posterPath)
+            .imageType(.poster, width: 150)
+            .build()
+    }
+    
 }

@@ -23,6 +23,8 @@
 		F8B795012CCF36D6003B29DB /* MovieListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B795002CCF36D6003B29DB /* MovieListItemViewModel.swift */; };
 		F8B795032CCF7141003B29DB /* MovieSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B795022CCF7141003B29DB /* MovieSearchViewController.swift */; };
 		F8B795062CCF72B3003B29DB /* MovieSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B795052CCF72B3003B29DB /* MovieSearchViewModel.swift */; };
+		F8BF41122CD0D30F0031124A /* UImageView+ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF41112CD0D30F0031124A /* UImageView+ImageDownloader.swift */; };
+		F8BF41142CD0D39E0031124A /* ImageUrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF41132CD0D39E0031124A /* ImageUrlBuilder.swift */; };
 		F8E91A2E2CCE98130091DC63 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A2D2CCE98130091DC63 /* ApiClient.swift */; };
 		F8E91A312CCE994A0091DC63 /* ApiTaskCancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A302CCE994A0091DC63 /* ApiTaskCancelable.swift */; };
 		F8E91A332CCE9AA80091DC63 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E91A322CCE9AA80091DC63 /* ApiRequest.swift */; };
@@ -111,6 +113,8 @@
 		F8B795002CCF36D6003B29DB /* MovieListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListItemViewModel.swift; sourceTree = "<group>"; };
 		F8B795022CCF7141003B29DB /* MovieSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewController.swift; sourceTree = "<group>"; };
 		F8B795052CCF72B3003B29DB /* MovieSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewModel.swift; sourceTree = "<group>"; };
+		F8BF41112CD0D30F0031124A /* UImageView+ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UImageView+ImageDownloader.swift"; sourceTree = "<group>"; };
+		F8BF41132CD0D39E0031124A /* ImageUrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrlBuilder.swift; sourceTree = "<group>"; };
 		F8E91A2D2CCE98130091DC63 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		F8E91A302CCE994A0091DC63 /* ApiTaskCancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTaskCancelable.swift; sourceTree = "<group>"; };
 		F8E91A322CCE9AA80091DC63 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
@@ -450,6 +454,7 @@
 				F8E91A552CCECDB80091DC63 /* UIColor+Constructors.swift */,
 				F8E91A572CCECE5C0091DC63 /* UIView+Nib.swift */,
 				F8E91A592CCECEA60091DC63 /* UITableView+Extension.swift */,
+				F8BF41112CD0D30F0031124A /* UImageView+ImageDownloader.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -523,6 +528,7 @@
 			children = (
 				F8E91A982CCF118A0091DC63 /* RequestEndpoint */,
 				F8E91A932CCF0D340091DC63 /* Response */,
+				F8BF41132CD0D39E0031124A /* ImageUrlBuilder.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -834,6 +840,7 @@
 				F8E91A6D2CCEE4FD0091DC63 /* MovieListViewController.swift in Sources */,
 				F8E91A482CCECBFD0091DC63 /* ViewModelBindable.swift in Sources */,
 				F8E91A562CCECDB80091DC63 /* UIColor+Constructors.swift in Sources */,
+				F8BF41142CD0D39E0031124A /* ImageUrlBuilder.swift in Sources */,
 				F8E91A692CCEDAC70091DC63 /* Coordinator.swift in Sources */,
 				F8E91A852CCF01CA0091DC63 /* MovieListUsecase.swift in Sources */,
 				F8B795062CCF72B3003B29DB /* MovieSearchViewModel.swift in Sources */,
@@ -852,6 +859,7 @@
 				F8E91A512CCECD0F0091DC63 /* UIViewController+Extensions.swift in Sources */,
 				F8E91A602CCED2FE0091DC63 /* DateFormatter+Ext.swift in Sources */,
 				F8E91A792CCEE6950091DC63 /* AppCoordinator.swift in Sources */,
+				F8BF41122CD0D30F0031124A /* UImageView+ImageDownloader.swift in Sources */,
 				F8E91A762CCEE5E90091DC63 /* MovieCoordinator.swift in Sources */,
 				F8E91A4B2CCECC350091DC63 /* BaseViewControllers.swift in Sources */,
 				F8E91A662CCED3A60091DC63 /* URL+Directoryies.swift in Sources */,

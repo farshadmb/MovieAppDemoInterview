@@ -22,6 +22,7 @@ class MovieListTableCell: UITableViewCell, ViewModelBindableType {
         titleLabel.text = nil
         rateLabel.text = nil
         releaseDate.text = nil
+        movieImageView.cancelCurrentImageLoad()
     }
     
     override func awakeFromNib() {
@@ -36,5 +37,8 @@ class MovieListTableCell: UITableViewCell, ViewModelBindableType {
         titleLabel.text = viewModel.title
         releaseDate.text = viewModel.releaseDate
         rateLabel.text = viewModel.rating
+        movieImageView.setImage(url: viewModel.getPosterURL(),
+                                placeHolderImage: .imagePlaceholder,
+                                contentMode: .scaleAspectFit)
     }
 }
