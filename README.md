@@ -39,6 +39,8 @@ Also, app supports the dark theme.
 * Clean Code 
 * Clean Arch
 * Modern MVVM
+* Lint Checking
+* CI integration into github
 * github action, *see [action](../../actions) tab* 
 
 
