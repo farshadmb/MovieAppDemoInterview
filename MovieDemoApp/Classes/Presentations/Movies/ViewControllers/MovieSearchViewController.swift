@@ -37,15 +37,19 @@ class MovieSearchViewController: BaseViewController<MovieSearchViewModel>, UISea
     }
     
     override func setupUILayouts() {
+        view.backgroundColor = .Styles.defaultBackground
+        
         view.addSubview(tableView)
         tableView.autoPinEdgesToSuperviewSafeArea()
-        tableView.registerCell(type: MovieListTableCell.self)
+        tableView.backgroundColor = .Styles.defaultBackground
         tableView.separatorColor = .clear
-        tableView.estimatedRowHeight = 250.0
+        tableView.registerCell(type: MovieListTableCell.self)
+        tableView.estimatedRowHeight = 150.0
         
         resultsLabel.text = "No Results Found"
         resultsLabel.textAlignment = .center
         resultsLabel.textColor = .gray
+        resultsLabel.textColor = .Styles.secondary
         resultsLabel.isHidden = true // Initially hidden
         tableView.backgroundView = resultsLabel
     }

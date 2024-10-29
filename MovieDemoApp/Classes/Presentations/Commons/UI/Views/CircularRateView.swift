@@ -32,7 +32,8 @@ class CircularRateView: UIView {
     @IBInspectable
     var rate: Double = 0 {
         didSet {
-            valueLabel.text = "\(rate)"
+            valueLabel.text = formatNumber(number: rate)
+            valueCircleLayer.strokeEnd = rate / maxRate
         }
     }
     
@@ -76,7 +77,7 @@ class CircularRateView: UIView {
         addSubview(valueLabel)
         valueLabel.textColor = lineColor
         valueLabel.textAlignment = .center
-        valueLabel.text = "\(rate)"
+        valueLabel.text = formatNumber(number: rate)
         valueLabel.autoCenterInSuperview()
     }
     
@@ -111,6 +112,18 @@ class CircularRateView: UIView {
         
         valueCircleLayer.path = path.cgPath
         backgroundCircleLayer.path = path.cgPath
+    }
+    
+    private func formatNumber(number: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+
+        // Optional: Customize the formatter further
+        formatter.maximumFractionDigits = 2
+        formatter.locale = Locale.current
+
+        let formattedNumber = formatter.string(from: NSNumber(value: number)) ?? "\(number)"
+        return formattedNumber
     }
     
 }

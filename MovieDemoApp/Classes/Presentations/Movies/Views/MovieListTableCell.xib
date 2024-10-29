@@ -80,7 +80,7 @@
                             <constraint firstItem="LNs-43-GEV" firstAttribute="leading" secondItem="xUZ-88-8K6" secondAttribute="trailing" constant="16" id="0lk-kv-eo7"/>
                             <constraint firstItem="xUZ-88-8K6" firstAttribute="top" secondItem="nsb-2o-oee" secondAttribute="top" constant="8" id="HBS-xG-vSO"/>
                             <constraint firstAttribute="bottom" secondItem="LNs-43-GEV" secondAttribute="bottom" constant="8" id="IhY-uZ-ALe"/>
-                            <constraint firstAttribute="bottom" secondItem="xUZ-88-8K6" secondAttribute="bottom" constant="15" id="O0v-6L-ZMh"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xUZ-88-8K6" secondAttribute="bottom" constant="15" id="O0v-6L-ZMh"/>
                             <constraint firstAttribute="trailing" secondItem="LNs-43-GEV" secondAttribute="trailing" constant="16" id="OQo-md-X6M"/>
                             <constraint firstItem="LNs-43-GEV" firstAttribute="top" secondItem="nsb-2o-oee" secondAttribute="top" constant="8" id="QBx-5G-dlY"/>
                             <constraint firstItem="xUZ-88-8K6" firstAttribute="leading" secondItem="nsb-2o-oee" secondAttribute="leading" constant="16" id="v4H-BI-JLt"/>

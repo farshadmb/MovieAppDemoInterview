@@ -30,6 +30,13 @@ class MovieListTableCell: UITableViewCell, ViewModelBindableType {
         titleLabel.text = ""
         rateLabel.text = ""
         releaseDate.text = ""
+        movieImageView.clipsToBounds = true
+        movieImageView.layer.cornerRadius = movieImageView.bounds.width / 8
+        titleLabel.textColor = .Styles.primary
+        releaseDate.textColor = .Styles.tertiary
+        rateLabel.textColor = .Styles.secondary
+        titleLabel.font = .preferredFont(forTextStyle: .headline)
+        movieImageView.superview?.backgroundColor = .Styles.defaultBackground
     }
     
     func bindViewModel() {

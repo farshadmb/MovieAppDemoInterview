@@ -64,12 +64,12 @@ final class MovieDetailsViewModel {
         let output = Output(title: entity.title,
                             releaseDate: entity.releaseDate,
                             rate: entity.voteAverage,
-                            totalVote: "\(entity.voteCount)",
+                            totalVote: formatNumber(number: entity.voteCount),
                             status: entity.status?.uppercased() ?? "Released".uppercased(),
                             adult: entity.isAdult ? "+18" : "No limitation",
                             backdropImage: getBackdropURL(entity),
                             overview: entity.overview,
-                            popularity: "\(entity.popularity)")
+                            popularity: formatNumber(number: entity.popularity))
         infos.accept(output)
     }
     
@@ -93,6 +93,27 @@ final class MovieDetailsViewModel {
             .imagePath(path)
             .imageType(.poster, width: 500)
             .build()
+    }
+    
+    private func formatNumber(number: Double) -> String {
+        formatNumber(number: NSNumber(value: number))
+    }
+    
+    private func formatNumber(number: Int) -> String {
+        formatNumber(number: NSNumber(value: number))
+    }
+    
+    private func formatNumber(number: NSNumber) -> String {
+
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+
+        // Optional: Customize the formatter further
+        formatter.maximumFractionDigits = 2
+        formatter.locale = Locale.current
+
+        let formattedNumber = formatter.string(from: number) ?? "\(number.intValue)"
+        return formattedNumber
     }
     
 }

@@ -18,6 +18,10 @@
 		F8226C152CCE8CFB00645255 /* MovieDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8226C142CCE8CFB00645255 /* MovieDemoAppTests.swift */; };
 		F8226C1F2CCE8CFB00645255 /* MovieDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8226C1E2CCE8CFB00645255 /* MovieDemoAppUITests.swift */; };
 		F8226C212CCE8CFB00645255 /* MovieDemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8226C202CCE8CFB00645255 /* MovieDemoAppUITestsLaunchTests.swift */; };
+		F8265A0F2CD12E0A00B06895 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265A0E2CD12E0A00B06895 /* Color.swift */; };
+		F8265A122CD1300F00B06895 /* BackgroundColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265A112CD1300F00B06895 /* BackgroundColors.swift */; };
+		F8265A142CD1304400B06895 /* FillColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265A132CD1304400B06895 /* FillColors.swift */; };
+		F8265A162CD1321200B06895 /* TintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8265A152CD1321200B06895 /* TintColor.swift */; };
 		F86635E92CD10C6E00B198EF /* MovieDetailDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86635E82CD10C6E00B198EF /* MovieDetailDto.swift */; };
 		F86635EB2CD111E300B198EF /* MovieDetailUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86635EA2CD111E300B198EF /* MovieDetailUsecase.swift */; };
 		F86635ED2CD1120D00B198EF /* MovieDetailUsecaseImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86635EC2CD1120D00B198EF /* MovieDetailUsecaseImp.swift */; };
@@ -114,6 +118,10 @@
 		F8226C1A2CCE8CFB00645255 /* MovieDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8226C1E2CCE8CFB00645255 /* MovieDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDemoAppUITests.swift; sourceTree = "<group>"; };
 		F8226C202CCE8CFB00645255 /* MovieDemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8265A0E2CD12E0A00B06895 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F8265A112CD1300F00B06895 /* BackgroundColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColors.swift; sourceTree = "<group>"; };
+		F8265A132CD1304400B06895 /* FillColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillColors.swift; sourceTree = "<group>"; };
+		F8265A152CD1321200B06895 /* TintColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintColor.swift; sourceTree = "<group>"; };
 		F86635E82CD10C6E00B198EF /* MovieDetailDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailDto.swift; sourceTree = "<group>"; };
 		F86635EA2CD111E300B198EF /* MovieDetailUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailUsecase.swift; sourceTree = "<group>"; };
 		F86635EC2CD1120D00B198EF /* MovieDetailUsecaseImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailUsecaseImp.swift; sourceTree = "<group>"; };
@@ -269,6 +277,25 @@
 				F8226C202CCE8CFB00645255 /* MovieDemoAppUITestsLaunchTests.swift */,
 			);
 			path = MovieDemoAppUITests;
+			sourceTree = "<group>";
+		};
+		F8265A0D2CD12DEC00B06895 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				F8265A102CD12FF900B06895 /* Colors */,
+				F8265A0E2CD12E0A00B06895 /* Color.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		F8265A102CD12FF900B06895 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				F8265A152CD1321200B06895 /* TintColor.swift */,
+				F8265A112CD1300F00B06895 /* BackgroundColors.swift */,
+				F8265A132CD1304400B06895 /* FillColors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		F8BF41192CD0F3640031124A /* Views */ = {
@@ -436,6 +463,7 @@
 		F8E91A452CCECBD40091DC63 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F8265A0D2CD12DEC00B06895 /* Styles */,
 				F8BF41192CD0F3640031124A /* Views */,
 				F8E91A4F2CCECCD20091DC63 /* Extensions */,
 				F8E91A4C2CCECC700091DC63 /* Storboard */,
@@ -855,9 +883,11 @@
 				F8B795012CCF36D6003B29DB /* MovieListItemViewModel.swift in Sources */,
 				F8E91A8C2CCF02E90091DC63 /* MoviesRepository.swift in Sources */,
 				F8E91A9E2CCF1C660091DC63 /* DTOMapper.swift in Sources */,
+				F8265A162CD1321200B06895 /* TintColor.swift in Sources */,
 				F8E91A3C2CCEA4280091DC63 /* DefaultEncodableApiRequest.swift in Sources */,
 				F8E91A402CCEA9A90091DC63 /* DefaultApiClientAuthenticator.swift in Sources */,
 				F8E91A8E2CCF0C8B0091DC63 /* MovieDto.swift in Sources */,
+				F8265A142CD1304400B06895 /* FillColors.swift in Sources */,
 				F8E91AA22CCF24230091DC63 /* RxSwift+Additionals.swift in Sources */,
 				F8E91A3E2CCEA4390091DC63 /* DefaultParametersApiRequest.swift in Sources */,
 				F8E91A6F2CCEE5190091DC63 /* MovieListViewModel.swift in Sources */,
@@ -883,6 +913,7 @@
 				F8E91A372CCE9C160091DC63 /* ApiClientAuthenticator.swift in Sources */,
 				F8E91A7F2CCEF6DD0091DC63 /* MovieFactory.swift in Sources */,
 				F8E91A312CCE994A0091DC63 /* ApiTaskCancelable.swift in Sources */,
+				F8265A0F2CD12E0A00B06895 /* Color.swift in Sources */,
 				F8E91A5A2CCECEA60091DC63 /* UITableView+Extension.swift in Sources */,
 				F8226C002CCE8CF900645255 /* SceneDelegate.swift in Sources */,
 				F8E91A332CCE9AA80091DC63 /* ApiRequest.swift in Sources */,
@@ -896,6 +927,7 @@
 				F8E91A4B2CCECC350091DC63 /* BaseViewControllers.swift in Sources */,
 				F8E91A662CCED3A60091DC63 /* URL+Directoryies.swift in Sources */,
 				F8E91A972CCF10A70091DC63 /* RemoteMoviesRepository.swift in Sources */,
+				F8265A122CD1300F00B06895 /* BackgroundColors.swift in Sources */,
 				F8B795032CCF7141003B29DB /* MovieSearchViewController.swift in Sources */,
 				F8E91A642CCED3810091DC63 /* String+EmptyChecking.swift in Sources */,
 				F8E91A2E2CCE98130091DC63 /* ApiClient.swift in Sources */,
