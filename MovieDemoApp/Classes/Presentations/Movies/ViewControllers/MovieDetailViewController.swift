@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxSwiftExt
+import PureLayout
 
 class MovieDetailViewController: BaseViewController<MovieDetailsViewModel> {
 
@@ -31,6 +32,8 @@ class MovieDetailViewController: BaseViewController<MovieDetailsViewModel> {
     @IBOutlet var titleLabels: [UILabel]!
     
     @IBOutlet weak var scrollView: UIScrollView!
+   
+    private var loadingIndicatorView = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,10 @@ class MovieDetailViewController: BaseViewController<MovieDetailsViewModel> {
         for label in titleLabels {
             label.font = .preferredFont(forTextStyle: .subheadline)
         }
+        loadingIndicatorView.hidesWhenStopped = true
+        loadingIndicatorView.color = .systemBlue
+        view.addSubview(loadingIndicatorView)
+        loadingIndicatorView.autoCenterInSuperview()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,7 +61,8 @@ class MovieDetailViewController: BaseViewController<MovieDetailsViewModel> {
             return
         }
         
-        viewModel.isLoading.asObservable().bind(to: scrollView.rx.isHidden).disposed(by: disposeBag)
+        viewModel.isLoading.asObservable().bind(to: loadingIndicatorView.rx.isAnimating,
+                                                scrollView.rx.isHidden).disposed(by: disposeBag)
         viewModel.error.asObservable().bind(with: self) { (self, errorMessage) in
             self.presentAlertFor(error: errorMessage) {[weak self] in
                 self?.viewModel?.retry()
