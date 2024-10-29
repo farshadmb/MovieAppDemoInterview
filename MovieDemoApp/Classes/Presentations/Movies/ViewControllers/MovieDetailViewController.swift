@@ -30,25 +30,61 @@ class MovieDetailViewController: BaseViewController<MovieDetailsViewModel> {
     @IBOutlet weak var backdropImageView: UIImageView!
     
     @IBOutlet var titleLabels: [UILabel]!
+    @IBOutlet var seperatorsView: [UIView]!
     
     @IBOutlet weak var scrollView: UIScrollView!
    
+    private var scrollViewContentView: UIView! {
+        return scrollView.subviews.first
+    }
+    
+    private var overviewSectionView: UIView? {
+        return overviewLabel.superview?.superview
+    }
+    
     private var loadingIndicatorView = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Movie Details"
+        navigationItem.largeTitleDisplayMode = .never
         // Do any additional setup after loading the view.
     }
     
     override func setupUILayouts() {
         for label in titleLabels {
             label.font = .preferredFont(forTextStyle: .subheadline)
+            label.textColor = .Styles.tertiary
         }
+        
+        for label in [overviewLabel, popularityLabel, adultLabel, totalVoteLabel] {
+            label?.textColor = .Styles.secondary
+        }
+        
+        titleLabel.textColor = .Styles.primary
+        releaseDateLabel.textColor = .Styles.tertiary
+        statusLabel.textColor = .Styles.tertiary
+        
+        ratingView.lineColor = [UIColor.Styles.green, UIColor.Styles.blue,
+                                UIColor.Styles.yellow, UIColor.Styles.red].randomElement() ?? .Styles.green
+        ratingView.backgroundColor = .Styles.defaultBackground
         loadingIndicatorView.hidesWhenStopped = true
         loadingIndicatorView.color = .systemBlue
         view.addSubview(loadingIndicatorView)
         loadingIndicatorView.autoCenterInSuperview()
+        
+        overviewSectionView?.backgroundColor = .Styles.primaryGroupedBackground
+        
+        scrollView.backgroundColor = .Styles.defaultBackground
+        scrollViewContentView.backgroundColor = .Styles.defaultBackground
+        
+        for (index, view) in seperatorsView.enumerated() {
+            view.backgroundColor = .Styles.separator
+            view.isHidden = index == (seperatorsView.count - 1)
+            view.layer.cornerRadius = view.bounds.height / 2
+            view.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner,
+                                        .layerMinXMinYCorner, .layerMinXMaxYCorner]
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

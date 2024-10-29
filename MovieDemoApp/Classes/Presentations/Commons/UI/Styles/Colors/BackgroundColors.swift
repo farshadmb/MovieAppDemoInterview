@@ -38,9 +38,9 @@ enum OtherColors: Int, Color {
     var color: UIColor {
         switch self {
         case .separator:
-            return UIColor(lightHex: "#D8D8D8", darkHex: "") ?? UIColor(rgb: 0xd8d8d8 )
+            return UIColor(lightHex: "#D8D8D8", darkHex: "#D8D8D8") ?? UIColor(rgb: 0xd8d8d8 )
         case .shadow:
-            return UIColor(lightHex: "#000000", darkHex: "") ?? UIColor(rgb: 0x000000)
+            return UIColor(lightHex: "#000000", darkHex: "#000000") ?? UIColor(rgb: 0x000000)
         }
     }
     
@@ -51,7 +51,7 @@ enum OtherColors: Int, Color {
 
 extension UIColor.Styles {
     
-    static let `default` = BackgroundColors.default.color
+    static let defaultBackground = BackgroundColors.default.color
     static let primaryGroupedBackground   = BackgroundColors.primaryGrouped.color
     static let secondaryGroupedBackground = BackgroundColors.secondaryGrouped.color
     static let separator                  = OtherColors.separator.color
