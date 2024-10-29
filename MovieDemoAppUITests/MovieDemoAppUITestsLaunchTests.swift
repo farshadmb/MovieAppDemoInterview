@@ -9,6 +9,7 @@ import XCTest
 
 final class MovieDemoAppUITestsLaunchTests: XCTestCase {
 
+    // swiftlint:disable:next all
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
