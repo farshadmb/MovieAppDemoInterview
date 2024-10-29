@@ -34,9 +34,11 @@ class MovieListViewController: BaseViewController<MovieListViewModel> {
     }
     
     override func setupUILayouts() {
+        view.backgroundColor = .Styles.defaultBackground
+        tableView.backgroundColor = .Styles.defaultBackground
         tableView.separatorColor = .clear
         tableView.registerCell(type: MovieListTableCell.self)
-        tableView.estimatedRowHeight = 250.0
+        tableView.estimatedRowHeight = 150.0
     }
     
     override func bindViewModel() {
