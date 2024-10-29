@@ -18,17 +18,39 @@ extension MovieDto: DTOMapper {
     
     func toDomain() -> Movie {
         Movie(id: id,
+              title: title,
+              releaseDate: releaseDate,
+              overview: overview,
               isAdult: adult,
-              backdropPath: backdropPath,
+              hasVideo: video,
               originalLanguage: originalLanguage,
               originalTitle: title,
-              overview: overview,
               popularity: popularity,
+              backdropPath: backdropPath,
               posterPath: posterPath,
-              releaseDate: releaseDate,
-              title: title,
-              hasVideo: video,
               voteAverage: voteAverage,
               voteCount: voteCount)
+    }
+}
+
+extension MovieDetailDto: DTOMapper {
+    
+    func toDomain() -> Movie {
+        Movie(id: id,
+              title: title,
+              releaseDate: releaseDate,
+              overview: overview,
+              isAdult: adult,
+              hasVideo: video,
+              originalLanguage: originalLanguage,
+              originalTitle: title,
+              popularity: popularity,
+              backdropPath: backdropPath,
+              posterPath: posterPath,
+              voteAverage: voteAverage,
+              voteCount: voteCount,
+              budget: budget,
+              runtime: runtime
+        )
     }
 }
