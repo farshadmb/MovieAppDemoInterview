@@ -28,7 +28,7 @@ final class MovieSearchViewModel {
             .map { [ResultSectionType(model: 0, items: $0)] }
     }
     
-    var  noResults: Driver<Bool> { hasNoResult.asDriver() }
+    var noResults: Driver<Bool> { hasNoResult.asDriver() }
     
     var didErrorOccured: Driver<String> { error.asDriver(onErrorDriveWith: .never()) }
     

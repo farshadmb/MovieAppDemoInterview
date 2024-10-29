@@ -12,6 +12,7 @@ target 'MovieDemoApp' do
   pod 'RxSwift'
   pod 'RxSwiftExt'
   pod 'RxCocoa'
+  pod 'SDWebImage'
   # framework embedded in IPA file.
 
   # Utilities

@@ -80,6 +80,7 @@
                             <constraint firstItem="LNs-43-GEV" firstAttribute="leading" secondItem="xUZ-88-8K6" secondAttribute="trailing" constant="16" id="0lk-kv-eo7"/>
                             <constraint firstItem="xUZ-88-8K6" firstAttribute="top" secondItem="nsb-2o-oee" secondAttribute="top" constant="8" id="HBS-xG-vSO"/>
                             <constraint firstAttribute="bottom" secondItem="LNs-43-GEV" secondAttribute="bottom" constant="8" id="IhY-uZ-ALe"/>
+                            <constraint firstAttribute="bottom" secondItem="xUZ-88-8K6" secondAttribute="bottom" constant="15" id="O0v-6L-ZMh"/>
                             <constraint firstAttribute="trailing" secondItem="LNs-43-GEV" secondAttribute="trailing" constant="16" id="OQo-md-X6M"/>
                             <constraint firstItem="LNs-43-GEV" firstAttribute="top" secondItem="nsb-2o-oee" secondAttribute="top" constant="8" id="QBx-5G-dlY"/>
                             <constraint firstItem="xUZ-88-8K6" firstAttribute="leading" secondItem="nsb-2o-oee" secondAttribute="leading" constant="16" id="v4H-BI-JLt"/>
@@ -110,7 +111,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
