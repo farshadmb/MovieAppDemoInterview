@@ -11,7 +11,7 @@ struct MovieDetailDto: Decodable {
     
     let id: Int
     let title: String
-    let backdropPath: String
+    let backdropPath: String?
     let adult: Bool
     let budget: Int
     let genres: [GenreDto]
