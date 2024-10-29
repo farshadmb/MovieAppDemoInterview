@@ -53,6 +53,14 @@ class BaseViewController<T: AnyObject>: UIViewController, ViewModelBindableType 
         print("Handle this close button")
     }
     
+    open func presentAlertFor(error msg: String, completion: @escaping () -> Void) {
+        let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in completion() }))
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { _ in
+            alert.dismiss(animated: true)
+        }))
+        present(alert, animated: true)
+    }
     // MARK: - Keyboard Observation
     
     /// Subscribe to Keyboard Events likes Keyboard will show, will hide, and keyboard frame will change
@@ -66,8 +74,11 @@ class BaseViewController<T: AnyObject>: UIViewController, ViewModelBindableType 
                                                object: nil, queue: .main) {[weak self] notification in
             self?.didKeyboardNotificationEventFire(notification)
         }
-        let willChange = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillChangeFrameNotification,
-                                               object: nil, queue: .main) {[weak self] notification in
+        let willChange = NotificationCenter.default.addObserver(
+            forName: UIResponder.keyboardWillChangeFrameNotification,
+            object: nil,
+            queue: .main
+        ) {[weak self] notification in
             self?.didKeyboardNotificationEventFire(notification)
         }
         

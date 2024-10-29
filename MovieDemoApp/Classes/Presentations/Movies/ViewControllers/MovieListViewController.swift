@@ -29,6 +29,7 @@ class MovieListViewController: BaseViewController<MovieListViewModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Movies"
         viewModel?.fetchMovieListIfNeeded()
     }
     

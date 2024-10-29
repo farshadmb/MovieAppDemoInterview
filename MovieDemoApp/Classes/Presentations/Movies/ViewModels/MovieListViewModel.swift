@@ -27,11 +27,19 @@ class MovieListViewModel {
     var isLoading: Driver<Bool> { loading.asDriver() }
     
     var didErrorOccured: Driver<String> { error.asDriver(onErrorDriveWith: .never()) }
+   
+    typealias MovieSelectionClosure = (Movie) -> Void
+    
+    var didSelectMovie: MovieSelectionClosure?
     
     private let movies = BehaviorRelay<[SectionType.Item]>(value: [])
     private let loading = BehaviorRelay(value: false)
     private let error = PublishRelay<String>()
     private var page = 1
+   
+    deinit {
+        didSelectMovie = nil
+    }
     
     init(movieListUsecase: MovieListUsecase) {
         self.movieListUsecase = movieListUsecase
@@ -62,7 +70,10 @@ class MovieListViewModel {
     }
     
     func selectMovie(atIndex index: Int) {
-        print("Selected Item at \(index)")
+        guard let viewModel = movies.value[safe: index] else {
+            return
+        }
+        didSelectMovie?(viewModel.model)
     }
     
     private func fetchMovies(page: Int) {

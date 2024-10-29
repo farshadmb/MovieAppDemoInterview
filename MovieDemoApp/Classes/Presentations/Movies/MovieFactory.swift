@@ -12,4 +12,8 @@ protocol MovieFactory {
     func makeMovieListViewController() throws -> MovieListViewController
     
     func makeMovieSearchViewController() throws -> MovieSearchViewController
+    
+    func makeMovieDetailViewController(withId id: Int) throws -> MovieDetailViewController
+    
+    func makeMovieDetailViewController(with movie: Movie) throws -> MovieDetailViewController
 }
